@@ -1,5 +1,5 @@
 package org.informatics.services.products.interfaces;
 
 public interface ProductExpirationInterface {
-    int checkStoreForExpiredProducts();
+    int removeExpiredProductsFromStore();
 }

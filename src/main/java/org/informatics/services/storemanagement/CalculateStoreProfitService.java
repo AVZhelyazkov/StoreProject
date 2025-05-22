@@ -4,11 +4,13 @@ import lombok.RequiredArgsConstructor;
 import org.informatics.models.RetailStore;
 import org.informatics.services.storemanagement.interfaces.CalculateStoreProfitInterface;
 
+import java.math.BigDecimal;
+
 @RequiredArgsConstructor
 public class CalculateStoreProfitService implements CalculateStoreProfitInterface {
     private RetailStore store;
     @Override
-    public void getTotalProfit() {
-
+    public BigDecimal calcStoreProfit() {
+        return null;
     }
 }

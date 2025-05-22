@@ -2,6 +2,6 @@ package org.informatics.services.storemanagement.interfaces;
 
 import java.math.BigDecimal;
 
-public interface CalculateStoreProfitInterface {
-    BigDecimal calcStoreProfit();
+public interface CalculateStoreRevenueInterface {
+    BigDecimal calculateStoreRevenue();
 }

@@ -1,9 +1,11 @@
 package org.informatics.services.clientcheckout.interfaces;
 
 import org.informatics.enums.ProductCategory;
+import org.informatics.models.Product;
+
+import java.util.Set;
 
 public interface ClientProductSelectionInterface {
-    void productSelection();
-    void productSelection(int amountOfProducts);
-    void productFromCategorySelection(ProductCategory productCategory, int amountOfProducts);
+    Set<Product> productSelection(int amountOfProducts);
+    Set<Product> productFromCategorySelection(ProductCategory productCategory, int amountOfProducts);
 }
