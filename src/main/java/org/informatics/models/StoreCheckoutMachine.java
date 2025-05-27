@@ -13,7 +13,7 @@ public class StoreCheckoutMachine {
     private Map<Product, BigDecimal> scannedProducts;
     private Set<Receipt> cachedReceipts;
 
-    StoreCheckoutMachine() {
+    public StoreCheckoutMachine() {
         this.occupant = null;
         this.scannedProducts = null;
         this.cachedReceipts = new HashSet<>();

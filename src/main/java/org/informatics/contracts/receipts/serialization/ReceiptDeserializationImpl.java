@@ -2,7 +2,7 @@ package org.informatics.contracts.receipts.serialization;
 
 import org.informatics.contracts.receipts.contracts.ReceiptDeserialization;
 import org.informatics.models.Receipt;
-import org.informatics.utils.ReceiptsStoragePath;
+import org.informatics.utils.FileStoragePaths;
 
 import java.io.*;
 import java.time.LocalDate;
@@ -14,7 +14,7 @@ public class ReceiptDeserializationImpl implements ReceiptDeserialization {
     @Override
     public Set<Receipt> deserializeReceiptFile(LocalDate dateOfFile) throws IOException {
         File file = new File(
-                String.format(ReceiptsStoragePath.getReceiptsStoragePath(), dateOfFile)
+                String.format(FileStoragePaths.getReceiptsStoragePath(), dateOfFile)
         );
         if (!file.exists())
             throw new FileNotFoundException("File was not found.");

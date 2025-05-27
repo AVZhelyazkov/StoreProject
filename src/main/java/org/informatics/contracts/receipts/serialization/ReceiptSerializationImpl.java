@@ -5,13 +5,12 @@ import org.informatics.contracts.receipts.contracts.ClearReceiptsCache;
 import org.informatics.models.Receipt;
 import org.informatics.models.RetailStore;
 import org.informatics.contracts.receipts.contracts.ReceiptSerialization;
-import org.informatics.utils.ReceiptsStoragePath;
+import org.informatics.utils.FileStoragePaths;
 
 import java.io.*;
 import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.Set;
-import java.util.TreeSet;
 
 @RequiredArgsConstructor
 public class ReceiptSerializationImpl implements ReceiptSerialization {
@@ -21,7 +20,7 @@ public class ReceiptSerializationImpl implements ReceiptSerialization {
     public void saveReceiptsInDailyFile(boolean shouldClearCache) {
         LocalDate date = LocalDate.now();
         File file = new File(
-                String.format(ReceiptsStoragePath.getReceiptsStoragePath(), date)
+                String.format(FileStoragePaths.getReceiptsStoragePath(), date)
         );
         file.getParentFile().mkdirs();
 
