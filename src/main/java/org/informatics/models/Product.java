@@ -4,13 +4,14 @@ import lombok.Getter;
 import lombok.ToString;
 import org.informatics.enums.ProductCategory;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.UUID;
 
 @Getter
 @ToString
-public class Product {
+public class Product implements Serializable {
     private final UUID productId;
     private final String productName;
     private final ProductCategory productCategory;
